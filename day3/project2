@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+ 
+main()
+{
+   char ch, main_file[20], copied_file[20];
+   FILE *main, *copied;
+   printf("Enter name of file to copy\n");
+   gets(main_file);
+    main = fopen(main_file, "r");
+    if( main == NULL )
+   {
+      printf("File does not exist...\n");
+      exit(EXIT_FAILURE);
+   }
+   printf("Enter name of copied file\n");
+   gets(copied_file);
+   copied = fopen(copied_file, "w");
+   if( copied == NULL )
+   {
+      fclose(main);
+      printf("File does not exist...\n");
+      exit(EXIT_FAILURE);
+   }
+   while( ( ch = fgetc(main) ) != EOF )
+      fputc(ch, copied);
+   printf("File copied successfully.\n");
+   fclose(main);
+   fclose(copied);
+ 
+   return 0;
+}
