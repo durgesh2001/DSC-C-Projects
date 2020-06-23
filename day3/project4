@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include"areaPeri.h"
+int main()
+{
+	int a,p,q;
+	float r;
+	printf("Enter the radius of circle :");
+	scanf("%f",&r);
+	printf("\nArea of circle= %f\n ",areaCircle(r));
+	printf("Circumference of circle = %f",cirCircle(r));
+	printf("\nEnter length of side of square :");
+	scanf("%d",&a);
+	printf("Area of square = %d\n",areaSquare(a));
+	printf("Perimeter of square = %d\n",periSquare(a));
+	printf("Enter length and width of rectangle :");
+	scanf("%d%d",&p,&q);
+	printf("\nArea of Rectangle = %d\n",areaRectangle(p,q));
+	printf("Perimeter of Rectangle = %d\n",periRectangle(p,q));
+
+}
