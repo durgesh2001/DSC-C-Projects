@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+float f(float x)
+{
+sqrt(x);
+return sqrt(x);
+}
+main()
+{
+int i,n;
+float a,b,sum=0,x,integral,h;
+printf("Enter the no of interval =");
+scanf("%d",&n);
+printf("Enter the lower limit=");
+scanf("%f",&a);
+printf("Enter the upper limit=");
+scanf("%f",&b);
+h=fabs((b-a)/n);
+for(i=1;i<n;i++)
+{
+x=a+i*h;
+sum=sum+f(x);
+}
+integral=(h/2)*(f(a)+f(b)+2*sum);
+printf("the integral value is=%f",integral);
+}
