@@ -1,0 +1,27 @@
+#define PI 3.14
+#define A 4
+#define B 2
+float areaCircle(int r)
+{
+	return(PI*r*r);
+}
+float cirCircle(int r)
+{
+	return(B*PI*r);
+}
+int areaSquare(int a)
+{
+	return(a*a);
+}
+int periSquare(int a)
+{
+	return(A*a);
+}
+int areaRectangle(int p,int q)
+{
+	return(p*q);
+}
+int periRectangle(int p,int q)
+{
+	return(B*p*q);
+}
